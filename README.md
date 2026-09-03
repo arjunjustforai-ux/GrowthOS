@@ -8,7 +8,6 @@ context, a business objective and your own performance data into a **budget
 allocation you can interrogate, edit, approve and defend** — and stops there. It
 does not launch campaigns, move money, or optimise anything in an ad account.
 
-Built for JSPM323 — Managing & Developing Products.
 
 ---
 
