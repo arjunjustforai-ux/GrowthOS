@@ -4,7 +4,7 @@ import React from "react";
 import type { AnalyticsEventName } from "@/lib/types";
 import { formatDateTime, formatPct } from "@/lib/format";
 import { PageHeader } from "@/components/nav/AppShell";
-import { Badge, Callout, Card, EmptyState, LinkButton, Stat, cx } from "@/components/ui";
+import { Badge, Callout, Card, LinkButton, Stat, cx } from "@/components/ui";
 import { useWorkspace } from "@/lib/store/workspace";
 
 /**

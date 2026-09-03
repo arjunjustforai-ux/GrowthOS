@@ -9,7 +9,6 @@ import { ReasoningTrace } from "@/components/plan/ReasoningTrace";
 import {
   Badge,
   Button,
-  Callout,
   Card,
   ConfidencePill,
   DecisionBanner,

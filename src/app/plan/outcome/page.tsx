@@ -7,12 +7,10 @@ import { formatCompactINR, formatSignedPct } from "@/lib/format";
 import { GatedStage, PlanStagePage, StageFooter } from "@/components/plan/PlanStage";
 import {
   Badge,
-  Button,
   Callout,
   Card,
   ConfidencePill,
   DecisionBanner,
-  LinkButton,
   cx,
 } from "@/components/ui";
 import { stageBlockedReason } from "@/lib/engine/pipeline";

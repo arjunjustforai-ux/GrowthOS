@@ -12,7 +12,6 @@ import {
   Button,
   Callout,
   Card,
-  ConfidencePill,
   DecisionBanner,
   Field,
   Input,

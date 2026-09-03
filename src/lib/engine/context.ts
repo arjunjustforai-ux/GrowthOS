@@ -5,7 +5,7 @@ import type {
   CustomerSegment,
   MissingDataItem,
 } from "@/lib/types";
-import { clamp, safeDiv } from "./math";
+import { safeDiv } from "./math";
 
 /**
  * Stage 1 — Context Interpreter.
@@ -400,4 +400,4 @@ export function segmentUnitContribution(
   return segment.aovINR * (segment.grossMarginPct / 100) * lifetime - segment.historicalCacINR;
 }
 
-export { REPEAT_VALUE_FACTOR, clamp };
+export { REPEAT_VALUE_FACTOR };

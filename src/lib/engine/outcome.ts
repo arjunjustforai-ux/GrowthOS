@@ -10,7 +10,7 @@ import { accountMetrics } from "./context";
 import { bandFor } from "./confidence";
 import { clamp } from "./math";
 import { computeImpact } from "./budget";
-import { formatINR, formatCompactINR } from "@/lib/format";
+import { formatCompactINR } from "@/lib/format";
 
 /**
  * Stage 9 — Outcome Scenario Generator.
@@ -141,8 +141,6 @@ export function baselineRevenue(
 export function describeBand(outcome: OutcomeScenario): string {
   return `${formatCompactINR(outcome.lowINR)} – ${formatCompactINR(outcome.highINR)}, with the central range at ${formatCompactINR(outcome.baseLowINR)} – ${formatCompactINR(outcome.baseHighINR)}`;
 }
-
-export { formatINR };
 
 /** Shown whenever a user tries to plan against the top of the band. */
 export const UPPER_SCENARIO_WARNING =

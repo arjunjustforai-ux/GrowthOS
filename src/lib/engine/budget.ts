@@ -9,10 +9,9 @@ import type {
   SegmentRecommendation,
   StrategyRecommendation,
 } from "@/lib/types";
-import { accountMetrics, REPEAT_VALUE_FACTOR } from "./context";
+import { REPEAT_VALUE_FACTOR } from "./context";
 import { bandFor } from "./confidence";
 import { clamp, roundSharesTo100, safeDiv, sum } from "./math";
-import { roleLabel } from "./strategy";
 
 /**
  * Stage 5 — Budget Allocator, and the impact model behind the sliders.
@@ -288,4 +287,3 @@ export function recomputeAllocation(
   };
 }
 
-export { accountMetrics, roleLabel };
