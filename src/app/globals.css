@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ivory-100 text-navy-800 font-sans antialiased;
+    font-feature-settings: "cv05" 1, "ss01" 1;
+  }
+
+  /* Numbers in tables and metrics should line up, always. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    @apply bg-accent-100 text-navy-900;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent-400 ring-offset-2 ring-offset-ivory-100 rounded-sm;
+  }
+
+  input[type="range"] {
+    @apply h-1.5 w-full cursor-pointer appearance-none rounded-pill bg-navy-100;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    @apply h-5 w-5 appearance-none rounded-full border-2 border-white bg-accent-500;
+    box-shadow: 0 1px 6px rgba(31, 62, 171, 0.35);
+  }
+  input[type="range"]::-moz-range-thumb {
+    @apply h-5 w-5 rounded-full border-2 border-white bg-accent-500;
+  }
+  input[type="range"]:disabled::-webkit-slider-thumb {
+    @apply bg-navy-300;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-2xs font-semibold uppercase tracking-[0.14em] text-navy-400;
+  }
+
+  .card {
+    @apply rounded-card border border-line bg-white shadow-card;
+  }
+
+  .card-quiet {
+    @apply rounded-card border border-line-soft bg-ivory-50;
+  }
+
+  .hairline {
+    @apply border-t border-line-soft;
+  }
+
+  .link {
+    @apply text-accent-600 underline decoration-accent-200 underline-offset-2 hover:decoration-accent-500;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Print — the growth proposal has to survive Ctrl+P into a PDF a founder reads.
+   -------------------------------------------------------------------------- */
+@media print {
+  @page {
+    margin: 14mm;
+    size: A4;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  .no-print,
+  nav[data-app-nav],
+  aside[data-app-nav] {
+    display: none !important;
+  }
+
+  .print-full {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .card,
+  .card-quiet {
+    box-shadow: none !important;
+    border-color: #d8d2c6 !important;
+    break-inside: avoid;
+  }
+
+  .print-break {
+    break-before: page;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.7em;
+    color: #556784;
+  }
+}

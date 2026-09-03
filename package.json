@@ -1,0 +1,29 @@
+{
+  "name": "growthos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GrowthOS — AI drafts the argument. You make the call.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "verify": "node --experimental-strip-types --loader ./scripts/alias-loader.mjs scripts/verify-engine.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.25",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.5",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "autoprefixer": "10.4.21",
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.7.3"
+  }
+}
